@@ -1,25 +1,20 @@
-// Desplazamiento suave al hacer clic en el menú
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const targetId = this.getAttribute('href');
-    const targetElement = document.querySelector(targetId);
-
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+// Selector interactivo de habilidades
+function selectSkill(cardElement, name, description) {
+  // Desactivar todas las tarjetas
+  document.querySelectorAll('.skill-card').forEach(card => {
+    card.classList.remove('active');
   });
-});
 
-// Resaltar la tarjeta seleccionada al hacer clic
-const projectCards = document.querySelectorAll('.project-card');
+  // Activar la tarjeta seleccionada
+  cardElement.classList.add('active');
 
-projectCards.forEach(card => {
-  card.addEventListener('click', () => {
-    projectCards.forEach(c => c.style.borderColor = 'var(--border-color)');
-    card.style.borderColor = 'var(--accent-color)';
-  });
-});
+  // Actualizar la caja de detalle con animación sutil
+  const detailBox = document.getElementById('skill-box');
+  detailBox.style.opacity = '0.5';
+
+  setTimeout(() => {
+    document.getElementById('skill-title').innerText = name;
+    document.getElementById('skill-desc').innerText = description;
+    detailBox.style.opacity = '1';
+  }, 150);
+}

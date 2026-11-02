@@ -3,87 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Portafolio Profesional</title>
+  <title>Portafolio Profesional | Frontend Developer</title>
+  <!-- Fuente moderna Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
-  <!-- Navegación -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">MiPortafolio</div>
-      <ul class="nav-links">
-        <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#tecnologias">Tecnologías</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+  <!-- NAVEGACIÓN MINIMALISTA -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">DEV<span>.</span>PORTFOLIO</a>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="nav-btn">Contacto</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Presentación Personal (Sin Video) -->
-  <section id="sobre-mi" class="hero">
-    <h1>¡Hola! Soy <span class="highlight">[Tu Nombre]</span></h1>
-    <p>Desarrollador/a Frontend en formación con entusiasmo por crear experiencias web interactivas, funcionales y atractivas.</p>
-  </section>
-
-  <!-- Tecnologías y Habilidades -->
-  <section id="tecnologias">
-    <h2>🧰 Tecnologías y Habilidades</h2>
-    <div class="skills-grid">
-      <span class="skill-tag">HTML5</span>
-      <span class="skill-tag">CSS3</span>
-      <span class="skill-tag">JavaScript</span>
-      <span class="skill-tag">Git</span>
-      <span class="skill-tag">GitHub</span>
+  <!-- HÉROE / PRESENTACIÓN PRINCIPAL -->
+  <section class="hero">
+    <div class="hero-container">
+      <span class="badge">Desarrollador Frontend</span>
+      <h1>Construyendo experiencias web <span class="highlight">modernas y limpias</span></h1>
+      <p class="hero-description">
+        Especializado en la creación de sitios interactivos, adaptables y con código estructurado en HTML, CSS y JavaScript.
+      </p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+      </div>
     </div>
   </section>
 
-  <!-- Proyectos -->
-  <section id="proyectos">
-    <h2>📂 Mis Proyectos</h2>
-    <div class="projects-grid">
-      
-      <!-- Tarjeta de Proyecto 1 -->
-      <article class="project-card">
-        <img src="assets/project1.png" alt="Captura del Proyecto 1">
-        <h3>Proyecto 1: App Interactiva</h3>
-        <p>Una aplicación dinámica creada para resolver un problema cotidiano utilizando JavaScript para manipular el DOM.</p>
-        <p><strong>Tecnologías:</strong> HTML, CSS, JavaScript</p>
-        <div class="project-links">
-          <a href="#" target="_blank">Ver Demo</a>
-          <a href="#" target="_blank">GitHub Repo</a>
+  <main class="main-container">
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Perfil</span>
+        <h2>Sobre mí</h2>
+      </div>
+      <div class="about-card">
+        <p>
+          ¡Hola! Soy <strong>[Tu Nombre]</strong>, estudiante y desarrollador Web Frontend. Apasionado por el diseño de interfaces de usuario, la optimización web y la constante resolución de problemas a través del código. Mi enfoque combina la estética minimalista con la funcionalidad perfecta en cualquier dispositivo.
+        </p>
+      </div>
+    </section>
+
+    <!-- HABILIDADES INTERACTIVAS -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Tecnologías</span>
+        <h2>Mis Habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card active" onclick="selectSkill(this, 'HTML5', 'Estructuración semántica del contenido web, optimizada para SEO y accesibilidad.')">
+          <div class="skill-icon">HTML</div>
+          <h3>HTML5</h3>
         </div>
-      </article>
-
-      <!-- Tarjeta de Proyecto 2 -->
-      <article class="project-card">
-        <img src="assets/project1.png" alt="Captura del Proyecto 2">
-        <h3>Proyecto 2: Layout Responsivo</h3>
-        <p>Página web diseñada con arquitectura Mobile First y Flexbox/Grid para adaptarse a cualquier pantalla.</p>
-        <p><strong>Tecnologías:</strong> HTML, CSS</p>
-        <div class="project-links">
-          <a href="#" target="_blank">Ver Demo</a>
-          <a href="#" target="_blank">GitHub Repo</a>
+        <div class="skill-card" onclick="selectSkill(this, 'CSS3', 'Estilos modernos mediante Flexbox, CSS Grid, variables y diseños completamente responsivos.')">
+          <div class="skill-icon">CSS</div>
+          <h3>CSS3</h3>
         </div>
-      </article>
+        <div class="skill-card" onclick="selectSkill(this, 'JavaScript', 'Desarrollo de lógica dinámica, manipulación avanzada del DOM y gestión de eventos.')">
+          <div class="skill-icon">JS</div>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card" onclick="selectSkill(this, 'Git & GitHub', 'Control de versiones eficiente, trabajo colaborativo en equipo y despliegue en la nube.')">
+          <div class="skill-icon">GIT</div>
+          <h3>Git & GitHub</h3>
+        </div>
+      </div>
 
-    </div>
-  </section>
+      <!-- DETALLE DINÁMICO DE HABILIDAD -->
+      <div class="skill-detail" id="skill-box">
+        <h3 id="skill-title">HTML5</h3>
+        <p id="skill-desc">Estructuración semántica del contenido web, optimizada para SEO y accesibilidad.</p>
+      </div>
+    </section>
 
-  <!-- Contacto e Identidad Profesional -->
-  <section id="contacto">
-    <h2>💼 Contacto Profesional</h2>
-    <p>¿Te interesa colaborar o revisar más de mi trabajo? ¡Escríbeme!</p>
-    <div class="contact-info">
-      <p>📧 Correo: <a href="mailto:tu.correo@ejemplo.com">tu.correo@ejemplo.com</a></p>
-      <p>🔗 LinkedIn: <a href="https://linkedin.com/in/tu-perfil" target="_blank">linkedin.com/in/tu-perfil</a></p>
-      <p>🐙 GitHub: <a href="https://github.com/tu-usuario" target="_blank">github.com/tu-usuario</a></p>
-    </div>
-  </section>
+    <!-- PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">Portafolio</span>
+        <h2>Proyectos Destacados</h2>
+      </div>
+
+      <div class="projects-grid">
+        
+        <!-- PROYECTO 1 -->
+        <article class="project-card">
+          <div class="project-content">
+            <span class="project-tag">Web App</span>
+            <h3>Aplicación Web Interactiva</h3>
+            <p>Aplicación dinámica desarrollada para gestionar tareas e interactuar en tiempo real mediante manipulación directa del DOM.</p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver Demo Live →</a>
+              <a href="#" class="link-btn secondary">Repositorio GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2 -->
+        <article class="project-card">
+          <div class="project-content">
+            <span class="project-tag">Responsive Design</span>
+            <h3>Sitio Web Adaptable</h3>
+            <p>Landing page construida bajo la filosofía Mobile-First, garantizando adaptabilidad perfecta en teléfonos, tablets y monitores.</p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">Ver Demo Live →</a>
+              <a href="#" class="link-btn secondary">Repositorio GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section">
+      <div class="contact-card">
+        <h2>¿Tienes un proyecto en mente?</h2>
+        <p>Estoy disponible para colaboraciones, oportunidades de práctica y nuevos desafíos.</p>
+        <div class="contact-info">
+          <a href="mailto:tu.correo@ejemplo.com" class="contact-link">📧 tu.correo@ejemplo.com</a>
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-link">🔗 LinkedIn</a>
+          <a href="https://github.com/tu-usuario" target="_blank" class="contact-link">🐙 GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2026 Desarrollado con 💻 en Skillnest.</p>
+    <p>© 2026 Diseñado & Desarrollado por Skillnest Student</p>
   </footer>
 
   <script src="static/js/script.js"></script>
