@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Profesional | Frontend Developer</title>
-  <!-- Fuente moderna Inter -->
+  <title>Portafolio Interactivo | Frontend Developer</title>
+  <!-- Fuente Google Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
 
-  <!-- NAVEGACIÓN MINIMALISTA -->
+  <!-- ELEMENTOS DE FONDO DINÁMICO -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- NAVEGACIÓN -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">DEV<span>.</span>PORTFOLIO</a>
+      <a href="#" class="logo">Isidora<span class="logo-accent">.</span>V</a>
       <nav class="nav-links">
-        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#sobre-mi">Perfil</a>
         <a href="#skills">Habilidades</a>
         <a href="#proyectos">Proyectos</a>
-        <a href="#contacto" class="nav-btn">Contacto</a>
+        <a href="#contacto" class="nav-btn">¡Hablemos!</a>
       </nav>
     </div>
   </header>
 
-  <!-- HÉROE / PRESENTACIÓN PRINCIPAL -->
+  <!-- HÉROE DINÁMICO -->
   <section class="hero">
     <div class="hero-container">
-      <span class="badge">Desarrollador Frontend</span>
-      <h1>Construyendo experiencias web <span class="highlight">modernas y limpias</span></h1>
+      <div class="badge">⚡ Disponible para nuevos proyectos</div>
+      <h1>Diseño & Desarrollo de <span class="gradient-text">experiencias digitales</span></h1>
       <p class="hero-description">
-        Especializado en la creación de sitios interactivos, adaptables y con código estructurado en HTML, CSS y JavaScript.
+        Transformo ideas en soluciones web interactivas, responsivas y visualmente memorables utilizando estándares
+        modernos.
       </p>
       <div class="hero-actions">
-        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="#proyectos" class="btn btn-primary">Explorar Proyectos</a>
         <a href="#contacto" class="btn btn-secondary">Contactar</a>
       </div>
     </div>
@@ -42,108 +50,148 @@
 
   <main class="main-container">
 
-    <!-- SOBRE MÍ -->
+    <!-- BENTO GRID DE PERFIL & ESTADÍSTICAS -->
     <section id="sobre-mi" class="section">
       <div class="section-header">
-        <span class="section-subtitle">Perfil</span>
+        <span class="section-subtitle">// CONÓCEME</span>
         <h2>Sobre mí</h2>
       </div>
-      <div class="about-card">
-        <p>
-          ¡Hola! Soy <strong>[Tu Nombre]</strong>, estudiante y desarrollador Web Frontend. Apasionado por el diseño de interfaces de usuario, la optimización web y la constante resolución de problemas a través del código. Mi enfoque combina la estética minimalista con la funcionalidad perfecta en cualquier dispositivo.
-        </p>
+
+      <div class="bento-grid">
+        <div class="bento-card main-info">
+          <h3>¡Hola! Soy Isidora Valenzuela </h3>
+          <p>
+            Desarrolladora Web Frontend enfocada en crear interfaces limpias, dinámicas y altamente interactivas. Me
+            gusta experimentar con códigos, optimizar la experiencia de usuario y ver hasta el último detalle visual.
+          </p>
+        </div>
+
+        <div class="bento-card stat-card coral">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Código Limpio</span>
+        </div>
+
+        <div class="bento-card stat-card yellow">
+          <span class="stat-number">Mobile</span>
+          <span class="stat-label">First Design</span>
+        </div>
+
+        <div class="bento-card stat-card teal">
+          <span class="stat-number">HTML/CSS</span>
+          <span class="stat-label">& JS Moderno</span>
+        </div>
       </div>
     </section>
 
-    <!-- HABILIDADES INTERACTIVAS -->
+    <!-- HABILIDADES DINÁMICAS -->
     <section id="skills" class="section">
       <div class="section-header">
-        <span class="section-subtitle">Tecnologías</span>
+        <span class="section-subtitle">// STACK TÉCNICO</span>
         <h2>Mis Habilidades</h2>
       </div>
 
       <div class="skills-grid">
-        <div class="skill-card active" onclick="selectSkill(this, 'HTML5', 'Estructuración semántica del contenido web, optimizada para SEO y accesibilidad.')">
-          <div class="skill-icon">HTML</div>
+        <div class="skill-card active"
+          onclick="selectSkill(this, 'HTML5 Semántico', 'Construcción de estructuras sólidas, accesibles y optimizadas.')">
+          <div class="skill-badge html-badge">HTML5</div>
           <h3>HTML5</h3>
         </div>
-        <div class="skill-card" onclick="selectSkill(this, 'CSS3', 'Estilos modernos mediante Flexbox, CSS Grid, variables y diseños completamente responsivos.')">
-          <div class="skill-icon">CSS</div>
+        <div class="skill-card"
+          onclick="selectSkill(this, 'CSS3 & Layouts', 'Maquetación avanzada con Flexbox, CSS, variables dinámicas y animaciones fluidas.')">
+          <div class="skill-badge css-badge">CSS3</div>
           <h3>CSS3</h3>
         </div>
-        <div class="skill-card" onclick="selectSkill(this, 'JavaScript', 'Desarrollo de lógica dinámica, manipulación avanzada del DOM y gestión de eventos.')">
-          <div class="skill-icon">JS</div>
+        <div class="skill-card"
+          onclick="selectSkill(this, 'JavaScript Moderno', 'Lógica interactiva, gestión del DOM, consumo de APIs y manejo de eventos dinámicos.')">
+          <div class="skill-badge js-badge">JS</div>
           <h3>JavaScript</h3>
         </div>
-        <div class="skill-card" onclick="selectSkill(this, 'Git & GitHub', 'Control de versiones eficiente, trabajo colaborativo en equipo y despliegue en la nube.')">
-          <div class="skill-icon">GIT</div>
+        <div class="skill-card"
+          onclick="selectSkill(this, 'Control de Versiones', 'Gestión eficiente de repositorios, trabajo colaborativo y despliegue continuo en GitHub.')">
+          <div class="skill-badge git-badge">GIT</div>
           <h3>Git & GitHub</h3>
         </div>
       </div>
 
-      <!-- DETALLE DINÁMICO DE HABILIDAD -->
       <div class="skill-detail" id="skill-box">
-        <h3 id="skill-title">HTML5</h3>
-        <p id="skill-desc">Estructuración semántica del contenido web, optimizada para SEO y accesibilidad.</p>
+        <h3 id="skill-title">HTML5 Semántico</h3>
+        <p id="skill-desc">Construcción de estructuras sólidas, accesibles y optimizadas para SEO en buscadores.</p>
       </div>
     </section>
 
-    <!-- PROYECTOS DESTACADOS -->
+    <!-- PROYECTOS CON FILTRO INTERACTIVO -->
     <section id="proyectos" class="section">
       <div class="section-header">
-        <span class="section-subtitle">Portafolio</span>
+        <span class="section-subtitle">// TRABAJOS RECIENTES</span>
         <h2>Proyectos Destacados</h2>
       </div>
 
+      <!-- BOTONES DE FILTRO -->
+      <div class="project-filters">
+        <button class="filter-btn active" onclick="filterProjects('todos', this)">Todos</button>
+        <button class="filter-btn" onclick="filterProjects('web', this)">Web Apps</button>
+        <button class="filter-btn" onclick="filterProjects('responsive', this)">Responsive</button>
+      </div>
+
       <div class="projects-grid">
-        
         <!-- PROYECTO 1 -->
-        <article class="project-card">
+        <article class="project-card" data-category="web">
+          <div class="project-banner project-1-bg"></div>
           <div class="project-content">
             <span class="project-tag">Web App</span>
             <h3>Aplicación Web Interactiva</h3>
-            <p>Aplicación dinámica desarrollada para gestionar tareas e interactuar en tiempo real mediante manipulación directa del DOM.</p>
+            <p>Aplicación web interactiva que utiliza modelos de reconocimiento visual e Inteligencia Artificial para detectar y traducir gestos de la lengua de señas a texto en tiempo real. Desarrollada con un enfoque accesible e inclusivo para facilitar la comunicación sin barreras.</p>
             <div class="tech-stack">
               <span>HTML5</span>
               <span>CSS3</span>
-              <span>JavaScript</span>
+              <span>JS</span>
+              <span>PYTHON</span>
             </div>
             <div class="project-links">
-              <a href="#" class="link-btn">Ver Demo Live →</a>
-              <a href="#" class="link-btn secondary">Repositorio GitHub</a>
+              <!-- AQUÍ PONES LA URL DE TU PÁGINA PUBLICADA (Netlify, Vercel, GitHub Pages, etc.) -->
+              <a href="https://tuli-rh.github.io/pagina_informativa_SignSpeakAI/" target="_blank" class="link-btn primary">Demo Live →</a>
+
+              <!-- AQUÍ PONES LA URL DE TU REPOSITORIO EN GITHUB -->
+              <a href="https://github.com/tuli-rh/pagina_informativa_SignSpeakAI/" target="_blank"
+                class="link-btn secondary">GitHub</a>
             </div>
           </div>
         </article>
 
         <!-- PROYECTO 2 -->
-        <article class="project-card">
+        <article class="project-card" data-category="responsive">
+          <div class="project-banner project-2-bg"></div>
           <div class="project-content">
             <span class="project-tag">Responsive Design</span>
-            <h3>Sitio Web Adaptable</h3>
-            <p>Landing page construida bajo la filosofía Mobile-First, garantizando adaptabilidad perfecta en teléfonos, tablets y monitores.</p>
+            <h3>Portal Adaptativo</h3>
+            <p>Plataforma responsiva orientada a la comunidad que permite localizar, consultar productos y seguir los días de funcionamiento de ferias locales. Construida bajo la metodología Mobile-First para ofrecer una experiencia fluida y rápida desde cualquier dispositivo móvil.</p>
             <div class="tech-stack">
               <span>HTML5</span>
               <span>CSS3</span>
+              <span>JS</span>
+              <span>PYTHON</span>
             </div>
-            <div class="project-links">
-              <a href="#" class="link-btn">Ver Demo Live →</a>
-              <a href="#" class="link-btn secondary">Repositorio GitHub</a>
-            </div>
+              <!-- AQUÍ PONES LA URL DE TU PÁGINA PUBLICADA (Netlify, Vercel, GitHub Pages, etc.) -->
+              <a href="https://feriapp-sitio-web-xdsj.onrender.com/" target="_blank" class="link-btn primary">Demo Live →</a>
+
+              <!-- AQUÍ PONES LA URL DE TU REPOSITORIO EN GITHUB -->
+              <a href="https://github.com/tuli-rh/pagina_informativa_SignSpeakAI/" target="_blank"
+                class="link-btn secondary">GitHub</a>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO DESTACADO -->
     <section id="contacto" class="section">
       <div class="contact-card">
-        <h2>¿Tienes un proyecto en mente?</h2>
-        <p>Estoy disponible para colaboraciones, oportunidades de práctica y nuevos desafíos.</p>
+        <h2>¿Tienes una idea genial? 💡</h2>
+        <p>Estoy disponible para colaboraciones, proyectos o nuevas oportunidades.</p>
         <div class="contact-info">
-          <a href="mailto:tu.correo@ejemplo.com" class="contact-link">📧 tu.correo@ejemplo.com</a>
-          <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-link">🔗 LinkedIn</a>
-          <a href="https://github.com/tu-usuario" target="_blank" class="contact-link">🐙 GitHub</a>
+          <a href="mailto:isidorasofi1908@gmail.com" class="contact-link">📧 isidorasofi1908@gmail.com</a>
+          <a href="https://www.linkedin.com/in/isidora-valenzuela-a867843b9/edit/intro/" target="_blank"
+            class="contact-link">🔗 LinkedIn</a>
+          <a href="https://github.com/tuli-rh/feriApp_sitio_web" target="_blank" class="contact-link">🐙 GitHub</a>
         </div>
       </div>
     </section>
@@ -156,4 +204,5 @@
 
   <script src="static/js/script.js"></script>
 </body>
+
 </html>

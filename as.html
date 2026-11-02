@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Interactivo | Frontend Developer</title>
+  <!-- Fuente Google Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- BLOBS DE FONDO FLOTANTE -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- NAVEGACIÓN -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">DEV<span class="logo-accent">.</span>STUDIO</a>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Perfil</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto" class="nav-btn">¡Hablemos!</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HÉROE DINÁMICO -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="badge">⚡ Disponible para nuevos proyectos</div>
+      <h1>Diseño & Desarrollo de <span class="gradient-text">experiencias digitales</span></h1>
+      <p class="hero-description">
+        Transformo ideas en soluciones web interactivas, responsivas y visualmente memorables utilizando estándares modernos.
+      </p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Explorar Proyectos</a>
+        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container">
+
+    <!-- BENTO GRID DE PERFIL & ESTADÍSTICAS -->
+    <section id="sobre-mi" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">// CONÓCEME</span>
+        <h2>Sobre mí</h2>
+      </div>
+
+      <div class="bento-grid">
+         <div class="bento-card main-info">
+          <h3>¡Hola! Soy Isidora Valenzuela </h3>
+          <p>
+            Desarrolladora Web Frontend enfocada en crear interfaces limpias, dinámicas y altamente interactivas. Me
+            gusta experimentar con códigos, optimizar la experiencia de usuario y ver hasta el último detalle visual.
+          </p>
+        </div>
+
+        <div class="bento-card stat-card coral">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Código Limpio</span>
+        </div>
+
+        <div class="bento-card stat-card yellow">
+          <span class="stat-number">Mobile</span>
+          <span class="stat-label">First Design</span>
+        </div>
+
+        <div class="bento-card stat-card teal">
+          <span class="stat-number">HTML/CSS</span>
+          <span class="stat-label">& JS Moderno</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HABILIDADES DINÁMICAS -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">// STACK TÉCNICO</span>
+        <h2>Mis Habilidades</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card active"
+          onclick="selectSkill(this, 'HTML5 Semántico', 'Construcción de estructuras sólidas, accesibles y optimizadas.')">
+          <div class="skill-badge html-badge">HTML5</div>
+          <h3>HTML5</h3>
+        </div>
+        <div class="skill-card"
+          onclick="selectSkill(this, 'CSS3 & Layouts', 'Maquetación avanzada con Flexbox, CSS, variables dinámicas y animaciones fluidas.')">
+          <div class="skill-badge css-badge">CSS3</div>
+          <h3>CSS3</h3>
+        </div>
+        <div class="skill-card"
+          onclick="selectSkill(this, 'JavaScript Moderno', 'Lógica interactiva, gestión del DOM, consumo de APIs y manejo de eventos dinámicos.')">
+          <div class="skill-badge js-badge">JS</div>
+          <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card"
+          onclick="selectSkill(this, 'Control de Versiones', 'Gestión eficiente de repositorios, trabajo colaborativo y despliegue continuo en GitHub.')">
+          <div class="skill-badge git-badge">GIT</div>
+          <h3>Git & GitHub</h3>
+        </div>
+      </div>
+
+    <!-- PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="section">
+      <div class="section-header">
+        <span class="section-subtitle">// TRABAJOS RECIENTES</span>
+        <h2>Proyectos Destacados</h2>
+      </div>
+
+      <!-- BOTONES DE FILTRO -->
+      <div class="project-filters">
+        <button class="filter-btn active" onclick="filterProjects('todos', this)">Todos</button>
+        <button class="filter-btn" onclick="filterProjects('web', this)">Web Apps</button>
+        <button class="filter-btn" onclick="filterProjects('responsive', this)">Responsive</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROYECTO 1: SignSpeak AI -->
+        <article class="project-card" data-category="web">
+          <div class="project-banner">
+            <!-- Reemplaza la ruta por tu imagen real -->
+            <img src="static/img/signspeak-preview.png" alt="Captura de SignSpeak AI" onerror="this.parentNode.classList.add('project-1-bg')">
+          </div>
+          <div class="project-content">
+            <span class="project-tag">WEB APP & AI</span>
+            <h3>SignSpeak AI</h3>
+            <p>
+              Aplicación web interactiva que utiliza modelos de reconocimiento visual e Inteligencia Artificial para detectar y traducir gestos de la lengua de señas a texto en tiempo real. Desarrollada con un enfoque accesible e inclusivo para facilitar la comunicación sin barreras.
+            </p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JS</span>
+              <span>PYTHON</span>
+            </div>
+            <div class="project-links">
+              <a href="https://tu-link-signspeak.com" target="_blank" class="link-btn primary">Demo Live →</a>
+              <a href="https://github.com/tu-usuario/signspeak-ai" target="_blank" class="link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: FeriApp -->
+        <article class="project-card" data-category="responsive">
+          <div class="project-banner">
+            <!-- Reemplaza la ruta por tu imagen real -->
+            <img src="static/img/feriapp-preview.png" alt="Captura de FeriApp" onerror="this.parentNode.classList.add('project-2-bg')">
+          </div>
+          <div class="project-content">
+            <span class="project-tag">RESPONSIVE DESIGN</span>
+            <h3>FeriApp</h3>
+            <p>
+              Plataforma responsiva orientada a la comunidad que permite localizar, consultar productos y seguir los días de funcionamiento de ferias locales. Construida bajo la metodología Mobile-First para ofrecer una experiencia fluida y rápida desde cualquier dispositivo móvil.
+            </p>
+            <div class="tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JS</span>
+              <span>PYTHON</span>
+            </div>
+            <div class="project-links">
+              <a href="https://tu-link-feriapp.com" target="_blank" class="link-btn primary">Demo Live →</a>
+              <a href="https://github.com/tu-usuario/feriapp" target="_blank" class="link-btn secondary">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACTO DESTACADO -->
+    <section id="contacto" class="section">
+      <div class="contact-card">
+        <h2>¿Tienes una idea genial? 💡</h2>
+        <p>Estoy disponible para colaboraciones, proyectos o nuevas oportunidades.</p>
+        <div class="contact-info">
+          <a href="mailto:tu.correo@ejemplo.com" class="contact-link">📧 tu.correo@ejemplo.com</a>
+          <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="contact-link">🔗 LinkedIn</a>
+          <a href="https://github.com/tu-usuario" target="_blank" class="contact-link">🐙 GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Diseñado & Desarrollado con ⚡ por Skillnest Student</p>
+  </footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
