@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
-
 <body>
 
   <!-- ELEMENTOS DE FONDO DINÁMICO -->
@@ -38,8 +36,7 @@
       <div class="badge">⚡ Disponible para nuevos proyectos</div>
       <h1>Diseño & Desarrollo de <span class="gradient-text">experiencias digitales</span></h1>
       <p class="hero-description">
-        Transformo ideas en soluciones web interactivas, responsivas y visualmente memorables utilizando estándares
-        modernos.
+        Transformo ideas en soluciones web interactivas, responsivas y visualmente memorables utilizando estándares modernos.
       </p>
       <div class="hero-actions">
         <a href="#proyectos" class="btn btn-primary">Explorar Proyectos</a>
@@ -59,10 +56,9 @@
 
       <div class="bento-grid">
         <div class="bento-card main-info">
-          <h3>¡Hola! Soy Isidora Valenzuela </h3>
+          <h3>¡Hola! Soy Isidora Valenzuela 👋</h3>
           <p>
-            Desarrolladora Web Frontend enfocada en crear interfaces limpias, dinámicas y altamente interactivas. Me
-            gusta experimentar con códigos, optimizar la experiencia de usuario y ver hasta el último detalle visual.
+            Desarrolladora Web Frontend enfocada en crear interfaces limpias, dinámicas y altamente interactivas. Me gusta experimentar con códigos, optimizar la experiencia de usuario y ver hasta el último detalle visual.
           </p>
         </div>
 
@@ -91,23 +87,19 @@
       </div>
 
       <div class="skills-grid">
-        <div class="skill-card active"
-          onclick="selectSkill(this, 'HTML5 Semántico', 'Construcción de estructuras sólidas, accesibles y optimizadas.')">
+        <div class="skill-card active" onclick="selectSkill(this, 'HTML5 Semántico', 'Construcción de estructuras sólidas, accesibles y optimizadas.')">
           <div class="skill-badge html-badge">HTML5</div>
           <h3>HTML5</h3>
         </div>
-        <div class="skill-card"
-          onclick="selectSkill(this, 'CSS3 & Layouts', 'Maquetación avanzada con Flexbox, CSS, variables dinámicas y animaciones fluidas.')">
+        <div class="skill-card" onclick="selectSkill(this, 'CSS3 & Layouts', 'Maquetación avanzada con Flexbox, CSS, variables dinámicas y animaciones fluidas.')">
           <div class="skill-badge css-badge">CSS3</div>
           <h3>CSS3</h3>
         </div>
-        <div class="skill-card"
-          onclick="selectSkill(this, 'JavaScript Moderno', 'Lógica interactiva, gestión del DOM, consumo de APIs y manejo de eventos dinámicos.')">
+        <div class="skill-card" onclick="selectSkill(this, 'JavaScript Moderno', 'Lógica interactiva, gestión del DOM, consumo de APIs y manejo de eventos dinámicos.')">
           <div class="skill-badge js-badge">JS</div>
           <h3>JavaScript</h3>
         </div>
-        <div class="skill-card"
-          onclick="selectSkill(this, 'Control de Versiones', 'Gestión eficiente de repositorios, trabajo colaborativo y despliegue continuo en GitHub.')">
+        <div class="skill-card" onclick="selectSkill(this, 'Control de Versiones', 'Gestión eficiente de repositorios, trabajo colaborativo y despliegue continuo en GitHub.')">
           <div class="skill-badge git-badge">GIT</div>
           <h3>Git & GitHub</h3>
         </div>
@@ -134,12 +126,14 @@
       </div>
 
       <div class="projects-grid">
-        <!-- PROYECTO 1 -->
+        <!-- PROYECTO 1: SignSpeak AI -->
         <article class="project-card" data-category="web">
-          <div class="project-banner project-1-bg"></div>
+          <div class="project-banner">
+            <img src="static/img/SignSpeakAI.png" alt="Captura de SignSpeak AI" onerror="this.parentNode.classList.add('project-1-bg')">
+          </div>
           <div class="project-content">
-            <span class="project-tag">Web App</span>
-            <h3>Aplicación Web Interactiva</h3>
+            <span class="project-tag">WEB APP & AI</span>
+            <h3>SignSpeak AI</h3>
             <p>Aplicación web interactiva que utiliza modelos de reconocimiento visual e Inteligencia Artificial para detectar y traducir gestos de la lengua de señas a texto en tiempo real. Desarrollada con un enfoque accesible e inclusivo para facilitar la comunicación sin barreras.</p>
             <div class="tech-stack">
               <span>HTML5</span>
@@ -148,22 +142,20 @@
               <span>PYTHON</span>
             </div>
             <div class="project-links">
-              <!-- AQUÍ PONES LA URL DE TU PÁGINA PUBLICADA (Netlify, Vercel, GitHub Pages, etc.) -->
               <a href="https://tuli-rh.github.io/pagina_informativa_SignSpeakAI/" target="_blank" class="link-btn primary">Demo Live →</a>
-
-              <!-- AQUÍ PONES LA URL DE TU REPOSITORIO EN GITHUB -->
-              <a href="https://github.com/tuli-rh/pagina_informativa_SignSpeakAI/" target="_blank"
-                class="link-btn secondary">GitHub</a>
+              <a href="https://github.com/tuli-rh/pagina_informativa_SignSpeakAI/" target="_blank" class="link-btn secondary">GitHub</a>
             </div>
           </div>
         </article>
 
-        <!-- PROYECTO 2 -->
+        <!-- PROYECTO 2: FeriApp -->
         <article class="project-card" data-category="responsive">
-          <div class="project-banner project-2-bg"></div>
+          <div class="project-banner">
+            <img src="static/img/FeriApp.png" alt="Captura de FeriApp" onerror="this.parentNode.classList.add('project-2-bg')">
+          </div>
           <div class="project-content">
-            <span class="project-tag">Responsive Design</span>
-            <h3>Portal Adaptativo</h3>
+            <span class="project-tag">RESPONSIVE DESIGN</span>
+            <h3>FeriApp</h3>
             <p>Plataforma responsiva orientada a la comunidad que permite localizar, consultar productos y seguir los días de funcionamiento de ferias locales. Construida bajo la metodología Mobile-First para ofrecer una experiencia fluida y rápida desde cualquier dispositivo móvil.</p>
             <div class="tech-stack">
               <span>HTML5</span>
@@ -171,12 +163,10 @@
               <span>JS</span>
               <span>PYTHON</span>
             </div>
-              <!-- AQUÍ PONES LA URL DE TU PÁGINA PUBLICADA (Netlify, Vercel, GitHub Pages, etc.) -->
+            <div class="project-links">
               <a href="https://feriapp-sitio-web-xdsj.onrender.com/" target="_blank" class="link-btn primary">Demo Live →</a>
-
-              <!-- AQUÍ PONES LA URL DE TU REPOSITORIO EN GITHUB -->
-              <a href="https://github.com/tuli-rh/pagina_informativa_SignSpeakAI/" target="_blank"
-                class="link-btn secondary">GitHub</a>
+              <a href="https://github.com/tuli-rh/feriApp_sitio_web" target="_blank" class="link-btn secondary">GitHub</a>
+            </div>
           </div>
         </article>
       </div>
@@ -189,9 +179,8 @@
         <p>Estoy disponible para colaboraciones, proyectos o nuevas oportunidades.</p>
         <div class="contact-info">
           <a href="mailto:isidorasofi1908@gmail.com" class="contact-link">📧 isidorasofi1908@gmail.com</a>
-          <a href="https://www.linkedin.com/in/isidora-valenzuela-a867843b9/edit/intro/" target="_blank"
-            class="contact-link">🔗 LinkedIn</a>
-          <a href="https://github.com/tuli-rh/feriApp_sitio_web" target="_blank" class="contact-link">🐙 GitHub</a>
+          <a href="https://www.linkedin.com/in/isidora-valenzuela-a867843b9/" target="_blank" class="contact-link">🔗 LinkedIn</a>
+          <a href="https://github.com/isiss641225" target="_blank" class="contact-link">🐙 GitHub</a>
         </div>
       </div>
     </section>
@@ -204,5 +193,4 @@
 
   <script src="static/js/script.js"></script>
 </body>
-
 </html>
